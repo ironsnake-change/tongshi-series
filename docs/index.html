@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tongshi Series | 把每天一篇，做成一条可靠的流水线</title>
+  <meta name="description" content="一个研究先行、质量门禁、写发分离的 Codex skill，用于持续生产中文通识长文。">
+  <meta property="og:title" content="Tongshi Series | Research-first essay pipeline">
+  <meta property="og:description" content="Research dossiers, editorial gates, EPUB/PDF artifacts, and queued delivery for a durable Chinese essay series.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://ironsnake-change.github.io/tongshi-series/assets/banner.svg">
+  <link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+  <style>
+    :root { --ink:#071a1f; --ink-2:#0b2b30; --ink-3:#123b3b; --paper:#f4ead0; --muted:#9bb8b2; --teal:#67c7b4; --gold:#d6ad61; --line:rgba(216,197,141,.18); --white:#f7f3e9; }
+    * { box-sizing: border-box; } html { scroll-behavior: smooth; }
+    body { margin:0; color:var(--white); background:radial-gradient(circle at 85% 10%,rgba(103,199,180,.13),transparent 28rem),radial-gradient(circle at 8% 78%,rgba(214,173,97,.10),transparent 24rem),var(--ink); font-family:"Noto Sans SC","Microsoft YaHei",system-ui,sans-serif; line-height:1.7; }
+    a { color:inherit; } .wrap { width:min(1120px,calc(100% - 40px)); margin:0 auto; }
+    .grain { position:fixed; inset:0; pointer-events:none; opacity:.3; z-index:0; background-image:linear-gradient(rgba(216,197,141,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(216,197,141,.035) 1px,transparent 1px); background-size:44px 44px; mask-image:linear-gradient(to bottom,black,transparent 78%); }
+    header,main,footer { position:relative; z-index:1; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:24px 0; border-bottom:1px solid var(--line); }
+    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; } .brand img { width:38px; height:38px; border-radius:11px; }
+    .brand strong { display:block; font-family:"Noto Serif SC","Songti SC",SimSun,serif; font-size:18px; letter-spacing:1px; }
+    .brand span { display:block; color:var(--gold); font-family:Georgia,serif; font-size:9px; letter-spacing:3px; margin-top:-2px; }
+    nav { display:flex; align-items:center; gap:20px; color:var(--muted); font-size:13px; } nav a { text-decoration:none; } nav a:hover { color:var(--white); }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:42px; padding:0 18px; border:1px solid rgba(214,173,97,.52); border-radius:999px; text-decoration:none; font-size:13px; font-weight:700; background:rgba(214,173,97,.08); color:var(--paper); transition:.2s ease; }
+    .button:hover { background:rgba(214,173,97,.17); transform:translateY(-1px); } .button.primary { background:var(--gold); border-color:var(--gold); color:var(--ink); } .button.primary:hover { background:#e4c47d; }
+    .button.ghost { background:transparent; border-color:var(--line); color:var(--muted); }
+    .hero { display:grid; grid-template-columns:1.15fr .85fr; gap:60px; align-items:center; padding:86px 0 70px; }
+    .eyebrow { color:var(--teal); font-size:12px; letter-spacing:3px; text-transform:uppercase; font-weight:700; margin-bottom:20px; }
+    h1 { margin:0; color:var(--paper); font-family:"Noto Serif SC","Songti SC",SimSun,serif; font-size:clamp(44px,7vw,76px); line-height:1.08; letter-spacing:-.035em; font-weight:700; } h1 em { color:var(--gold); font-style:normal; }
+    .lede { max-width:620px; margin:25px 0 0; color:#c3d8d3; font-size:17px; line-height:1.9; } .lede strong { color:var(--white); font-weight:700; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; } .microcopy { margin-top:16px; color:#718f8a; font-size:12px; }
+    .run-card { background:linear-gradient(145deg,rgba(13,50,54,.94),rgba(7,26,31,.94)); border:1px solid rgba(214,173,97,.26); border-radius:24px; padding:22px; box-shadow:0 28px 80px rgba(0,0,0,.3); transform:rotate(1.2deg); }
+    .run-head { display:flex; justify-content:space-between; gap:12px; align-items:center; padding-bottom:16px; border-bottom:1px solid var(--line); } .run-head span:first-child { color:var(--muted); font-family:Georgia,serif; font-size:11px; letter-spacing:2px; }
+    .pill { padding:5px 9px; border:1px solid rgba(103,199,180,.3); border-radius:999px; color:var(--teal); font-size:10px; letter-spacing:1px; }
+    .run-row { display:grid; grid-template-columns:1fr auto; gap:12px; align-items:center; padding:15px 0; border-bottom:1px solid rgba(216,197,141,.08); } .run-row:last-child { border-bottom:0; padding-bottom:3px; } .run-row span { color:#b4cac5; font-size:13px; } .run-row b { color:var(--paper); font-family:"Noto Serif SC",serif; font-size:17px; } .run-row .ok { color:var(--teal); font-family:Georgia,serif; font-size:11px; letter-spacing:1px; } .run-row .gold { color:var(--gold); font-family:Georgia,serif; font-size:11px; letter-spacing:1px; }
+    .section { padding:70px 0; border-top:1px solid var(--line); } .section-head { display:flex; justify-content:space-between; gap:30px; align-items:end; margin-bottom:30px; } .kicker { color:var(--gold); font-family:Georgia,serif; font-size:11px; letter-spacing:3px; text-transform:uppercase; margin-bottom:10px; }
+    h2 { margin:0; color:var(--paper); font-family:"Noto Serif SC","Songti SC",SimSun,serif; font-size:clamp(28px,4vw,42px); line-height:1.22; font-weight:700; letter-spacing:-.02em; } .section-head p { max-width:390px; margin:0; color:var(--muted); font-size:14px; }
+    .feature-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; } .feature { min-height:230px; padding:24px; border:1px solid var(--line); border-radius:16px; background:linear-gradient(180deg,rgba(13,50,54,.52),rgba(7,26,31,.22)); } .feature .num { color:var(--gold); font-family:Georgia,serif; font-size:12px; letter-spacing:2px; } .feature h3 { margin:36px 0 10px; color:var(--paper); font-family:"Noto Serif SC",serif; font-size:22px; } .feature p { margin:0; color:#9bb6b0; font-size:13px; line-height:1.8; }
+    .pipeline { display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:36px; border:1px solid var(--line); border-radius:18px; overflow:hidden; } .step { padding:25px 22px; border-right:1px solid var(--line); background:rgba(7,26,31,.45); } .step:last-child { border-right:0; } .step span { color:var(--gold); font-family:Georgia,serif; font-size:11px; letter-spacing:2px; } .step strong { display:block; margin:14px 0 6px; color:var(--paper); font-family:"Noto Serif SC",serif; font-size:20px; } .step p { margin:0; color:#8eada7; font-size:12px; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start; } .code-card { border:1px solid var(--line); border-radius:18px; background:#06171a; overflow:hidden; } .code-head { display:flex; justify-content:space-between; align-items:center; padding:12px 16px; border-bottom:1px solid var(--line); color:#76958f; font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:11px; } .copy { border:0; background:transparent; color:var(--gold); font:inherit; cursor:pointer; }
+    pre { margin:0; padding:22px; overflow-x:auto; color:#d8e6e1; font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:12px; line-height:1.9; } .code-card + .code-card { margin-top:12px; }
+    .prose h2 { margin-bottom:18px; } .prose p { color:#a9c1bb; font-size:14px; } .prose p strong { color:var(--paper); } .checks { display:grid; gap:10px; margin:20px 0 0; padding:0; list-style:none; } .checks li { display:flex; gap:10px; color:#b9cec9; font-size:13px; } .checks li::before { content:"✓"; color:var(--teal); font-weight:700; }
+    .limits { display:grid; grid-template-columns:1fr 1fr; gap:12px; } .limit { padding:22px; border:1px solid var(--line); border-radius:14px; background:rgba(13,50,54,.35); } .limit b { display:block; color:var(--paper); margin-bottom:7px; font-family:"Noto Serif SC",serif; font-size:17px; } .limit span { color:#8eaaa4; font-size:13px; }
+    .cta { padding:54px 0 72px; } .cta-box { display:flex; align-items:center; justify-content:space-between; gap:30px; padding:34px 38px; border-radius:20px; border:1px solid rgba(214,173,97,.3); background:linear-gradient(120deg,rgba(18,59,59,.85),rgba(7,26,31,.9)); } .cta-box h2 { font-size:clamp(24px,3.5vw,36px); } .cta-box p { margin:8px 0 0; color:var(--muted); font-size:13px; }
+    footer { border-top:1px solid var(--line); padding:24px 0 34px; color:#718f8a; font-size:12px; display:flex; justify-content:space-between; gap:20px; } footer a { text-decoration:none; color:var(--gold); }
+    @media (max-width:900px) { .hero,.split { grid-template-columns:1fr; gap:36px; } .feature-grid { grid-template-columns:1fr 1fr; } .pipeline { grid-template-columns:1fr 1fr; } .step:nth-child(2) { border-right:0; } .step:nth-child(-n+2) { border-bottom:1px solid var(--line); } .cta-box { align-items:flex-start; flex-direction:column; } nav { display:none; } }
+    @media (max-width:560px) { .wrap { width:min(100% - 28px,1120px); } .topbar { padding:18px 0; } .hero { padding:60px 0 48px; } .feature-grid,.pipeline,.limits { grid-template-columns:1fr; } .step { border-right:0; border-bottom:1px solid var(--line); } .step:last-child { border-bottom:0; } .section { padding:52px 0; } .section-head { display:block; } .section-head p { margin-top:14px; } footer { flex-direction:column; } }
+  </style>
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="wrap"><div class="topbar">
+    <a class="brand" href="./"><img src="../assets/icon.svg" alt="Tongshi Series"><span><strong>通识丛书</strong><span>TONGSHI SERIES</span></span></a>
+    <nav><a href="#why">为什么</a><a href="#how">工作流</a><a href="#start">开始使用</a><a href="https://github.com/ironsnake-change/tongshi-series/releases/tag/v0.1.0">Release</a></nav>
+    <a class="button" href="https://github.com/ironsnake-change/tongshi-series">GitHub ↗</a>
+  </div></header>
+  <main class="wrap">
+    <section class="hero"><div>
+      <div class="eyebrow">Codex skill · public beta · v0.1.0</div>
+      <h1>让 AI 写一篇不难。<br><em>难的是每天都能交付。</em></h1>
+      <p class="lede">Tongshi Series 把“每天一篇中文通识长文”拆成四条可检查的流水线：<strong>研究、写作、质量门禁、排队投递</strong>。不是提示词合集，是一套能落到磁盘上的编辑系统。</p>
+      <div class="actions"><a class="button primary" href="https://github.com/ironsnake-change/tongshi-series">查看仓库 ↗</a><a class="button ghost" href="#start">30 秒开始</a></div>
+      <p class="microcopy">公开仓库不包含你的文章、邮箱、SMTP 或本地凭据。</p>
+    </div><aside class="run-card" aria-label="Run card">
+      <div class="run-head"><span>RUN CARD / TODAY</span><span class="pill">PUBLIC BETA</span></div>
+      <div class="run-row"><span>待发库存</span><b>4</b></div><div class="run-row"><span>编辑部状态</span><b class="ok">READY</b></div><div class="run-row"><span>结构门禁</span><b class="ok">PASS</b></div><div class="run-row"><span>成品</span><b>EPUB + PDF</b></div><div class="run-row"><span>投递队列</span><b class="gold">07:00 / 19:00</b></div>
+    </aside></section>
+    <section class="section" id="why"><div class="section-head"><div><div class="kicker">Why this exists</div><h2>把“灵光一现”变成<br>可复用的产能。</h2></div><p>一篇好文章可以靠灵感。一个每天更新的系列，只能靠流程。这个 skill 关注的是灵感之后的那部分。</p></div>
+      <div class="feature-grid"><article class="feature"><div class="num">01 / EVIDENCE</div><h3>先抓证据</h3><p>每个主题先生成 research.md，原始段落留在磁盘上。写作从材料出发，而不是从模型的记忆出发。</p></article><article class="feature"><div class="num">02 / JUDGMENT</div><h3>编辑门禁</h3><p>字数、正文、章节、开头、确定性说明和术语表由脚本检查。结构问题在发布前暴露。</p></article><article class="feature"><div class="num">03 / STATE</div><h3>库存有状态</h3><p>article.md、.sent 和 meta.json 共同定义稿件的生命周期。断网、重启或换终端都能恢复。</p></article><article class="feature"><div class="num">04 / DELIVERY</div><h3>写发分离</h3><p>写作只补库存，投递按 queued_at 取稿。先备货，再发货，不再到点才发现没有东西可发。</p></article></div>
+    </section>
+    <section class="section" id="how"><div class="section-head"><div><div class="kicker">The pipeline</div><h2>一条线，四个检查点。</h2></div><p>每一步都能独立重跑，每一步都留下可检查的文件。</p></div>
+      <div class="pipeline"><div class="step"><span>01 / RESEARCH</span><strong>抓证据</strong><p>保存来源、提取争议点、记录抓取失败，不用记忆填空。</p></div><div class="step"><span>02 / WRITE</span><strong>按规范写</strong><p>场景、机制、转折、代价、争议，最后是三级确定性说明。</p></div><div class="step"><span>03 / CHECK</span><strong>过门禁</strong><p>validator 检查结构，作者继续核对事实；通过后才打包。</p></div><div class="step"><span>04 / DELIVER</span><strong>排进队列</strong><p>以 queued_at 排序，投递成功才写 .sent，失败不跳稿。</p></div></div>
+    </section>
+    <section class="section split" id="start"><div class="prose"><div class="kicker">Quick start</div><h2>30 秒把流程跑起来。</h2><p>这是一个 Codex skill，也是一套可以单独执行的工具包。研究、校验和成品构建只依赖 Python 标准库；PDF 使用本地 Chrome、Edge 或 Chromium。</p><ul class="checks"><li>克隆到 Codex skills 目录</li><li>用脚手架建立第一篇稿件</li><li>抓取 research.md 后开始写作</li><li>通过 validator，再生成 EPUB 和 PDF</li></ul></div>
+      <div><div class="code-card"><div class="code-head"><span>install</span><button class="copy" data-copy="install-code">COPY</button></div><pre id="install-code">git clone https://github.com/ironsnake-change/tongshi-series.git "$env:CODEX_HOME/skills/tongshi-series"</pre></div><div class="code-card"><div class="code-head"><span>first issue</span><button class="copy" data-copy="first-code">COPY</button></div><pre id="first-code">python scripts/new_article.py --root . --id sample-topic --domain "未知与边界" --title "一个具体的标题"
+python scripts/research.py "Tunguska event" "通古斯大爆炸" --out 2026-11-05-sample-topic/research.md</pre></div><div class="code-card"><div class="code-head"><span>quality gate</span><button class="copy" data-copy="gate-code">COPY</button></div><pre id="gate-code">python scripts/validate_article.py 2026-11-05-sample-topic/article.md</pre></div></div>
+    </section>
+    <section class="section"><div class="section-head"><div><div class="kicker">Who it is for</div><h2>适合长期主义，<br>不适合内容灌水。</h2></div><p>它不会替你决定什么值得写，也不会把没有证据的说法包装成事实。</p></div>
+      <div class="limits"><div class="limit"><b>适合</b><span>邮件通讯、知识专栏、读书会材料、内部知识库，以及任何需要“主题轮转 + 质量稳定 + 定时交付”的系列。</span></div><div class="limit"><b>不适合</b><span>一次性文章、没有编辑标准的内容农场、希望完全无人审核地自动发布，或者把模型输出当成历史定论。</span></div><div class="limit"><b>已验证</b><span>官方 skill 结构校验、三篇生产稿的质量门禁、脚手架、库存、EPUB 和 PDF 烟雾测试。</span></div><div class="limit"><b>已知边界</b><span>默认来源是 Wikipedia；事实核查仍需人工。公开包不附带邮件凭据和定时投递实现。</span></div></div>
+    </section>
+    <section class="cta"><div class="cta-box"><div><div class="kicker">Build your own series</div><h2>把它改成你的主题系列。</h2><p>换掉 topics、编辑规范和交付目标，保留研究、门禁和库存纪律。</p></div><a class="button primary" href="https://github.com/ironsnake-change/tongshi-series">Fork / Star on GitHub ↗</a></div></section>
+  </main>
+  <footer class="wrap"><span>Tongshi Series · MIT · public beta</span><span><a href="https://github.com/ironsnake-change/tongshi-series/releases/tag/v0.1.0">v0.1.0 Release</a> · <a href="https://github.com/ironsnake-change/tongshi-series">GitHub</a></span></footer>
+  <script>
+    document.querySelectorAll(".copy").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var node = document.getElementById(button.getAttribute("data-copy"));
+        if (!node) return;
+        navigator.clipboard.writeText(node.innerText).then(function () {
+          var old = button.textContent;
+          button.textContent = "COPIED";
+          setTimeout(function () { button.textContent = old; }, 1400);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

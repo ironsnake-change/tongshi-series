@@ -1,15 +1,18 @@
 # Tongshi Series
 
-![Tongshi Series](assets/banner.svg)
+![Tongshi Series](assets/banner.png)
 
 ![status](https://img.shields.io/badge/status-public%20beta-F59E0B)
 ![license](https://img.shields.io/badge/license-MIT-0F766E)
 ![python](https://img.shields.io/badge/python-3.11%2B-3776AB)
 ![platform](https://img.shields.io/badge/platform-Windows%20tested%20%7C%20portable%20scripts-1D4ED8)
+[![live page](https://img.shields.io/badge/live-landing%20page-0F766E)](https://ironsnake-change.github.io/tongshi-series/)
 
 一个用于持续生产中文通识长文的 Codex skill（v0.1.0 public beta）：先研究，再写作；先备稿，再投递；每一篇都能追溯到资料、字数、成品和发布状态。
 
 它解决的不是“让模型写一篇文章”，而是把“每天都能稳定交出一篇像样的文章”拆成一套可检查的流程。研究和写作是前台，库存、队列、EPUB/PDF 和投递是后台。
+
+在线介绍页：[ironsnake-change.github.io/tongshi-series](https://ironsnake-change.github.io/tongshi-series/) · 发布文案：[docs/promotion-kit.md](docs/promotion-kit.md)
 
 ## 为什么值得试用
 
