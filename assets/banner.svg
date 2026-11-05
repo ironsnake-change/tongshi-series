@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="560" viewBox="0 0 1280 560" role="img" aria-labelledby="title desc">
+  <title id="title">Tongshi Series</title>
+  <desc id="desc">A research-first Chinese essay pipeline: research, write, check, deliver.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071a1f"/>
+      <stop offset="0.55" stop-color="#0b2b30"/>
+      <stop offset="1" stop-color="#123b3b"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f3d28a"/>
+      <stop offset="1" stop-color="#c79a45"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M 44 0 L 0 0 0 44" fill="none" stroke="#d8c58d" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="560" fill="url(#bg)"/>
+  <rect width="1280" height="560" fill="url(#grid)"/>
+  <circle cx="1120" cy="88" r="210" fill="#65d6c1" opacity="0.055"/>
+  <circle cx="100" cy="520" r="180" fill="#e0b967" opacity="0.045"/>
+  <g transform="translate(76 72)">
+    <text x="0" y="38" fill="#f2e7c8" font-family="Noto Serif SC, Songti SC, SimSun, serif" font-size="54" font-weight="700">通识丛书</text>
+    <text x="0" y="78" fill="#e4c77f" font-family="Georgia, serif" font-size="17" letter-spacing="6">TONGSHI SERIES</text>
+    <line x1="0" y1="112" x2="480" y2="112" stroke="url(#gold)" stroke-width="2"/>
+    <text x="0" y="162" fill="#dbe9e5" font-family="Noto Sans SC, Microsoft YaHei, sans-serif" font-size="25">先研究，再写作；先备稿，再投递。</text>
+    <text x="0" y="204" fill="#8fb8b2" font-family="Noto Sans SC, Microsoft YaHei, sans-serif" font-size="19">A durable editorial pipeline for a daily Chinese knowledge series.</text>
+    <g transform="translate(0 270)">
+      <rect x="0" y="0" width="142" height="42" rx="21" fill="#123f42" stroke="#4fa89c" stroke-opacity="0.45"/>
+      <text x="71" y="27" text-anchor="middle" fill="#bfe9df" font-family="Noto Sans SC, Microsoft YaHei, sans-serif" font-size="15">BACKLOG</text>
+      <rect x="156" y="0" width="142" height="42" rx="21" fill="#123f42" stroke="#4fa89c" stroke-opacity="0.45"/>
+      <text x="227" y="27" text-anchor="middle" fill="#bfe9df" font-family="Noto Sans SC, Microsoft YaHei, sans-serif" font-size="15">RESEARCH</text>
+      <rect x="312" y="0" width="142" height="42" rx="21" fill="#123f42" stroke="#4fa89c" stroke-opacity="0.45"/>
+      <text x="383" y="27" text-anchor="middle" fill="#bfe9df" font-family="Noto Sans SC, Microsoft YaHei, sans-serif" font-size="15">QA</text>
+    </g>
+    <text x="0" y="382" fill="#8aaca7" font-family="Noto Sans SC, Microsoft YaHei, sans-serif" font-size="17">Wikipedia research · deterministic checks · EPUB + PDF · queued delivery</text>
+  </g>
+  <g transform="translate(700 108)">
+    <rect x="0" y="0" width="504" height="344" rx="24" fill="#081f24" stroke="#d8c58d" stroke-opacity="0.18"/>
+    <text x="38" y="55" fill="#8fb8b2" font-family="Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" letter-spacing="3">PIPELINE / 01</text>
+    <g font-family="Noto Sans SC, Microsoft YaHei, sans-serif">
+      <g transform="translate(38 82)">
+        <rect width="196" height="88" rx="14" fill="#0d3236" stroke="#64c8b5" stroke-opacity="0.45"/>
+        <text x="18" y="32" fill="#f1d58e" font-size="13" letter-spacing="2">01 / RESEARCH</text>
+        <text x="18" y="60" fill="#dcece8" font-size="21">抓证据</text>
+        <text x="18" y="79" fill="#86aaa5" font-size="12">save sources to disk</text>
+      </g>
+      <g transform="translate(268 82)">
+        <rect width="196" height="88" rx="14" fill="#0d3236" stroke="#64c8b5" stroke-opacity="0.45"/>
+        <text x="18" y="32" fill="#f1d58e" font-size="13" letter-spacing="2">02 / WRITE</text>
+        <text x="18" y="60" fill="#dcece8" font-size="21">按规范写</text>
+        <text x="18" y="79" fill="#86aaa5" font-size="12">scene, mechanism, doubt</text>
+      </g>
+      <g transform="translate(38 202)">
+        <rect width="196" height="88" rx="14" fill="#0d3236" stroke="#64c8b5" stroke-opacity="0.45"/>
+        <text x="18" y="32" fill="#f1d58e" font-size="13" letter-spacing="2">03 / CHECK</text>
+        <text x="18" y="60" fill="#dcece8" font-size="21">过门禁</text>
+        <text x="18" y="79" fill="#86aaa5" font-size="12">length, sections, certainty</text>
+      </g>
+      <g transform="translate(268 202)">
+        <rect width="196" height="88" rx="14" fill="#0d3236" stroke="#64c8b5" stroke-opacity="0.45"/>
+        <text x="18" y="32" fill="#f1d58e" font-size="13" letter-spacing="2">04 / DELIVER</text>
+        <text x="18" y="60" fill="#dcece8" font-size="21">按时投递</text>
+        <text x="18" y="79" fill="#86aaa5" font-size="12">queue, lock, confirm</text>
+      </g>
+    </g>
+    <path d="M 240 126 H 258" stroke="#e0b967" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 136 178 V 194" stroke="#e0b967" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 366 178 V 194" stroke="#e0b967" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="136" cy="178" r="4" fill="#e0b967"/>
+    <circle cx="366" cy="178" r="4" fill="#e0b967"/>
+    <circle cx="258" cy="126" r="4" fill="#e0b967"/>
+    <circle cx="240" cy="320" r="4" fill="#e0b967"/>
+    <text x="38" y="326" fill="#70928d" font-family="Georgia, serif" font-size="12" letter-spacing="3">RESEARCH FIRST · PUBLISH WITH EVIDENCE</text>
+  </g>
+</svg>

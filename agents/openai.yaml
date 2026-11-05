@@ -1,0 +1,8 @@
+interface:
+  display_name: "Tongshi Series"
+  short_description: "Research-first Chinese essay series with QA"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#0F766E"
+  default_prompt: "Use $tongshi-series to fill the backlog with researched Chinese essays without sending them."
+policy:
+  allow_implicit_invocation: true
